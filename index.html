@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Content Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Add to head section in index.html -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <div class="container">
+        <h1 class="title">AI Content Generator<span class="accent">.</span></h1>
+        <div class="card">
+            <div class="input-section">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Content Type</label>
+                        <select id="contentType">
+                            <option value="formal-letter">Formal Letter</option>
+                            <option value="speech">Speech</option>
+                            <option value="email">Professional Email</option>
+                            <option value="blog-post">Blog Post</option>
+                            <option value="presentation">Presentation Script</option>
+                            <option value="report">Business Report</option>
+                            <option value="proposal">Project Proposal</option>
+                            <option value="resume">Resume/CV</option>
+                            <option value="academic">Academic Paper</option>
+                            <option value="press-release">Press Release</option>
+                            <option value="social-media">Social Media Post</option>
+                            <option value="newsletter">Newsletter</option>
+                            <option value="product-desc">Product Description</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Tone</label>
+                        <select id="tone">
+                            <option value="formal">Formal</option>
+                            <option value="informal">Informal</option>
+                            <option value="professional">Professional</option>
+                            <option value="friendly">Friendly</option>
+                            <option value="persuasive">Persuasive</option>
+                            <option value="enthusiastic">Enthusiastic</option>
+                            <option value="authoritative">Authoritative</option>
+                            <option value="empathetic">Empathetic</option>
+                            <option value="humorous">Humorous</option>
+                            <option value="inspirational">Inspirational</option>
+                            <option value="educational">Educational</option>
+                            <option value="conversational">Conversational</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Topic/Subject</label>
+                    <textarea id="topic" placeholder="What would you like to write about?"></textarea>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Length</label>
+                        <select id="length">
+                            <option value="very-short">Very Short (< 150 words)</option>
+                            <option value="short">Short (150-300 words)</option>
+                            <option value="medium">Medium (300-600 words)</option>
+                            <option value="long">Long (600-1000 words)</option>
+                            <option value="very-long">Very Long (1000+ words)</option>
+                            <option value="custom">Custom Length</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Target Audience</label>
+                        <select id="audience">
+                            <option value="general">General Public</option>
+                            <option value="professional">Business Professionals</option>
+                            <option value="academic">Academic Community</option>
+                            <option value="technical">Technical Experts</option>
+                            <option value="students">Students</option>
+                            <option value="executives">C-Level Executives</option>
+                            <option value="developers">Developers</option>
+                            <option value="marketers">Marketing Professionals</option>
+                            <option value="creative">Creative Professionals</option>
+                            <option value="healthcare">Healthcare Professionals</option>
+                            <option value="educators">Educators</option>
+                            <option value="investors">Investors</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button onclick="generateContent()" class="generate-btn">
+                    <span>Generate Content</span>
+                    <div class="loading-spinner"></div>
+                </button>
+            </div>
+        </div>
+
+        <div id="content-output" class="content-card"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
